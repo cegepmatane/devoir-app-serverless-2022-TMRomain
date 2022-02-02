@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <script defer src="Application.js"></script>
+    <title>Les technologie d'annimation WEB</title>
+  </head>
+  <body>
+    <script type="plain/text" id="html-vue-principale">
+        <div class="page">
+          <h1>Liste des technologies d'annimation</h1>
+          <ul id="liste-tech">
+            <li><a href="#tech/{Tech.id}" class="liste-tech-item">{Tech.titre}</a>
+              <p class="liste-tech-item-desc">{Tech.desc}</br>
+            </p></li>
+          </ul>
+        </div>
+        </script>
+  </body>
+</html>

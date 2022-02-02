@@ -2,9 +2,9 @@
   "name": "appserverless",
   "version": "1.0.0",
   "description": "Mon projet pour le cours d'infonuagique ",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "electron ."
+    "start": "electron ."
   },
   "author": "Romain Dubard",
   "license": "ISC",
