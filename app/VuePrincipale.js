@@ -1,4 +1,4 @@
-class vuePrincipale{
+class VuePrincipale{
     constructor(){
       this.html = document.getElementById("html-vue-principale").innerHTML;
       this.listeTechDonnee = null;

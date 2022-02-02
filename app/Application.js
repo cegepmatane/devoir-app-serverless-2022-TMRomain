@@ -36,5 +36,5 @@ class Application {
   
   }
   
-  new Application(window, new vuePrincipale(),new TechnologiesDAO());
+  new Application(window, new VuePrincipale(),new TechnologiesDAO());
   

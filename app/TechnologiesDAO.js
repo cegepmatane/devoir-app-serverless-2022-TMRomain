@@ -19,9 +19,9 @@
                                       data[position].id);
   
               console.log(technologie);
-              //listeCadeau.push(cadeau);
+              listeTech.push(cadeau);
             }
-            //action(listeCadeau);
+            action(listeCadeau);
           });
     }
 }
