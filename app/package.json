@@ -1,0 +1,15 @@
+{
+  "name": "appserverless",
+  "version": "1.0.0",
+  "description": "Mon projet pour le cours d'infonuagique ",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "Romain Dubard",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^17.0.0"
+  },
+  
+}
