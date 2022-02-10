@@ -19,8 +19,9 @@ class Application {
   
       if(!hash){
         //On est dans la vue principale 
-        this.vuePrincipale.initialiserListeTech(this.technologiesDAO.lister());
-        this.vuePrincipale.afficher();
+        this.technologiesDAO.lister((listeTech) => this.afficherNouvelleListeTechnologie(listeTech));
+        // this.technologiesDAO.lister(this.vuePrincipale.initialiserListeTech());
+        // this.vuePrincipale.afficher();
   
       }else{
   
@@ -33,7 +34,10 @@ class Application {
   
       }
     }
-  
+    afficherNouvelleListeTechnologie(listeTech){
+        this.vuePrincipale.initialiserListeTech(listeTech);
+        this.vuePrincipale.afficher();
+      }
   }
   
   new Application(window, new VuePrincipale(),new TechnologiesDAO());

@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="style/principale.css">
     <script src="Technologie.js"></script>
     <script src="TechnologiesDAO.js"></script>
     <script src="VuePrincipale.js"></script>
@@ -17,7 +16,7 @@
         <div class="page">
           <h1>Liste des technologies d'annimation</h1>
           <ul id="liste-tech">
-            <li><a href="#tech/{Tech.id}" class="liste-tech-item">{Tech.titre}</a>
+            <li class="box-liste"><a href="#tech/{Tech.id}" class="liste-tech-item">{Tech.titre}</a>
               <p class="liste-tech-item-desc">{Tech.desc}</br>
             </p></li>
           </ul>

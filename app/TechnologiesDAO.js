@@ -1,14 +1,15 @@
 ﻿class TechnologiesDAO{
     constructor(){
-      this.URL = 'http://192.168.56.2/serveur/'
+      this.URLLister = 'https://0804819aud.execute-api.us-east-1.amazonaws.com/default/lister'
     }
   
     lister(action){
-      fetch(this.URL + 'lister.php')
+
+      fetch(this.URLLister,{mode:"cors"})
         .then(response => response.json())
         .then(data =>
           {
-            console.log(data);
+            // console.log(data);
             let listeTech = [];
             for(let position in data){
               let technologie = new Technologie(data[position].titre,
@@ -18,10 +19,10 @@
                                       data[position].support,
                                       data[position].id);
   
-              console.log(technologie);
-              listeTech.push(cadeau);
+              //console.log(technologie);
+              listeTech.push(technologie);
             }
-            action(listeCadeau);
+            action(listeTech);
           });
     }
 }
