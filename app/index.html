@@ -16,10 +16,11 @@
 </head>
 
 <body>
-  <div class="square"><div>
-  <div class="circle"><div>
-  <div class="triangle"><div>
+
   <script type="plain/text" id="html-vue-principale">
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
     <div class="page">
           <h1>Liste des technologies d'annimation</h1>
           <a href="#ajouter" class="action"><div>Ajouter a la liste</div></a>
@@ -31,6 +32,9 @@
         </div>
         </script>
   <script type="plain/text" id="html-vue-detail">
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="triangle"></div>
     <div class="page">
             <h1 id="tech-item-titre"></h1></h1>
             <p id="tech-item-desc"></p></br>
@@ -42,7 +46,11 @@
       </div>
     </script>
     <script type="plain/text" id="html-vue-ajouter">
+      <div class="square"></div>
+      <div class="circle"></div>
+      <div class="triangle"></div>
       <div class="formulaire-ajout">
+        <div class="center">
         <form action="">
           <div class="champ-ajout">
             <label for="titre" class="label">Titre</label>
@@ -65,10 +73,11 @@
             <input type="text" id="support" class="saisit">
           </div>
           <div class="div-bouton-ajouter">
-            <a id="bouton-ajouter" class="bouton" href="#">Ajouter</a>
+            <a id="bouton-ajouter" class="action" href="#">Ajouter</a>
           </div>
         </form>
-        <a href="#" class="action-retour">Retour</a>
+      </div>
+        <a href="#" class="action">Retour</a>
       </div>
     </script>
 </body>
