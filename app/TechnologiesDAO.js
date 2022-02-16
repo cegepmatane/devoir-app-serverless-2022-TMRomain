@@ -27,7 +27,30 @@
     }
 
 
-    ajouter(){
+    ajouter(technologie,action){
+      console.log(JSON.stringify(technologie));
+      fetch("https://h7pucgg5ii.execute-api.us-east-1.amazonaws.com/default/ajouter",{
+        method:'POST',
+        headers:{
+          'Content-Type' : 'application/x-www-form-urlencoded'
+        },
+        body: 'technologiejson=' +JSON.stringify(technologie),
+        mode:'cors',
+      }).then(response => response.text())
+      .then(data=>{
+        console.log('Detail:',data);
+        action();
+      })
+    }
+
+    chercher(id,action){
+      fetch("https://y3zxsi699a.execute-api.us-east-1.amazonaws.com/default/chercher-par-id"+'?id='+id,{mode:"cors"})
+      .then(response => response.json())
+      .then(data =>{
+        console.log(data);
+        let technologie = new Technologie(data.titre,technologie.description,technologie.creation,technologie.performance,technologie.support,technologie.id);
+        action(technologie);
+      });
       
     }
 }
