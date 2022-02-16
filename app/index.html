@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <link rel="stylesheet" href="style/principale.css">
-    <script src="Technologie.js"></script>
-    <script src="TechnologiesDAO.js"></script>
-    <script src="VuePrincipale.js"></script>
-    <script defer src="Application.js"></script>
 
-    <title>Les technologie d'annimation WEB</title>
-  </head>
-  <body>
-    <script type="plain/text" id="html-vue-principale">
-        <div class="page">
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <link rel="stylesheet" href="style/principale.css">
+  <script src="Technologie.js"></script>
+  <script src="TechnologiesDAO.js"></script>
+  <script src="VuePrincipale.js"></script>
+  <script src="VueDetail.js"></script>
+  <script defer src="Application.js"></script>
+
+  <title>Les technologie d'annimation WEB</title>
+</head>
+
+<body>
+  <script type="plain/text" id="html-vue-principale">
+    <div class="page">
           <h1>Liste des technologies d'annimation</h1>
+          <a href="#ajouter" class="action">Ajouter a la liste</a>
           <ul id="liste-tech">
             <li class="box-liste"><a href="#tech/{Tech.id}" class="liste-tech-item">{Tech.titre}</a>
               <p class="liste-tech-item-desc">{Tech.desc}</br>
@@ -22,5 +26,39 @@
           </ul>
         </div>
         </script>
-  </body>
+  <script type="plain/text" id="html-vue-detail">
+    <div class="page">
+            <h1 id="tech-item-titre"></h1></h1>
+            <p id="tech-item-desc"></p></br>
+            <p id="tech-item-creation"></p></br>
+            <p id="tech-item-perf"></p></br>
+            <p id="tech-item-support"></p></br>
+          <a href="#" class="action">Retour</a>
+
+      </div>
+    </script>
+    <script type="plain/text" id="html-vue-ajouter">
+      <div class="formulaire-connexion-inscription">
+        <form action="">
+          <div class="champ-connextion-inscription">
+            <label for="" class="nom-utilisateur">Nom d'utilisateur</label>
+            <input type="text" id="nom" class="saisit">
+          </div>
+          <div class="champ-connextion-inscription">
+            <label for="">Mot de passe</label>
+            <input type="password" id="motDePasse" class="saisit">
+          </div>
+          <div class="champ-connextion-inscription">
+            <label for="">Confirmer mdp</label>
+            <input type="password" id="confirmMotDePasse" class="saisit">
+          </div>
+          <div class="div-bouton-enregistrer-connexion-inscription">
+            <a class="bouton-enregistrer-connexion-inscription" href="">Enregistrer</a>
+          </div>
+        </form>
+      </div>
+      {menu}
+    </script>
+</body>
+
 </html>

@@ -1,10 +1,12 @@
 class Application {
-    constructor(window, vuePrincipale,technologiesDAO){
+    constructor(window, vuePrincipale,vueDetail,technologiesDAO){
   
       this.window = window;
 
 
       this.vuePrincipale = vuePrincipale;
+
+      this.vueDetail = vueDetail;
   
       this.technologiesDAO = technologiesDAO;
   
@@ -22,23 +24,27 @@ class Application {
         this.technologiesDAO.lister((listeTech) => this.afficherNouvelleListeTechnologie(listeTech));
         // this.technologiesDAO.lister(this.vuePrincipale.initialiserListeTech());
         // this.vuePrincipale.afficher();
-  
+        
+      }else if (hash.match(/^#ajouter/)) {
+        this.vueInscription.afficher();
       }else{
   
-        // let navigation = hash.match(/^#jeu\/([0-9]+)/);
-        // let idJeu = navigation[1];
+        let navigation = hash.match(/^#tech\/([0-9]+)/);
+        //let idItem = navigation[1];
   
-        // let jeu = this.jeuDAO.chercher(parseInt(idJeu))
-        // this.vueJeu.initialiserJeu(jeu);
-        // this.vueJeu.afficher();
+        //this.vueDetail.initialiserItem(this.technologiesDAO.lister()[idItem]);
+        this.vueDetail.afficher();
   
       }
     }
+
+
+
     afficherNouvelleListeTechnologie(listeTech){
         this.vuePrincipale.initialiserListeTech(listeTech);
         this.vuePrincipale.afficher();
-      }
+    }
   }
   
-  new Application(window, new VuePrincipale(),new TechnologiesDAO());
+  new Application(window, new VuePrincipale(),new VueDetail(),new TechnologiesDAO());
   
