@@ -48,7 +48,7 @@
       .then(response => response.json())
       .then(data =>{
         console.log(data);
-        let technologie = new Technologie(data.titre,technologie.description,technologie.creation,technologie.performance,technologie.support,technologie.id);
+        let technologie = new Technologie(data.titre,data.description,data.creation,data.performance,data.support,data.id);
         action(technologie);
       });
       

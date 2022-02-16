@@ -16,14 +16,17 @@
 </head>
 
 <body>
+  <div class="square"><div>
+  <div class="circle"><div>
+  <div class="triangle"><div>
   <script type="plain/text" id="html-vue-principale">
     <div class="page">
           <h1>Liste des technologies d'annimation</h1>
-          <a href="#ajouter" class="action">Ajouter a la liste</a>
+          <a href="#ajouter" class="action"><div>Ajouter a la liste</div></a>
           <ul id="liste-tech">
-            <li class="box-liste"><a href="#tech/{Tech.id}" class="liste-tech-item">{Tech.titre}</a>
+            <a href="#tech/{Tech.id}" class="liste-tech-item"><li class="box-liste">{Tech.titre}
               <p class="liste-tech-item-desc">{Tech.desc}</br>
-            </p></li>
+            </p></li></a>
           </ul>
         </div>
         </script>
