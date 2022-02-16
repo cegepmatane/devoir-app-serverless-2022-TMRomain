@@ -1,5 +1,5 @@
 class Application {
-    constructor(window, vuePrincipale,vueDetail,technologiesDAO){
+    constructor(window, vuePrincipale,vueDetail,VueAjouter,technologiesDAO){
   
       this.window = window;
 
@@ -7,6 +7,8 @@ class Application {
       this.vuePrincipale = vuePrincipale;
 
       this.vueDetail = vueDetail;
+
+      this.VueAjouter = VueAjouter; 
   
       this.technologiesDAO = technologiesDAO;
   
@@ -26,7 +28,7 @@ class Application {
         // this.vuePrincipale.afficher();
         
       }else if (hash.match(/^#ajouter/)) {
-        this.vueInscription.afficher();
+        this.VueAjouter.afficher(this.technologiesDAO);
       }else{
   
         let navigation = hash.match(/^#tech\/([0-9]+)/);
@@ -46,5 +48,5 @@ class Application {
     }
   }
   
-  new Application(window, new VuePrincipale(),new VueDetail(),new TechnologiesDAO());
+  new Application(window, new VuePrincipale(),new VueDetail(),new VueAjouter(),new TechnologiesDAO());
   
