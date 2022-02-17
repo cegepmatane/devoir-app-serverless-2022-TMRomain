@@ -18,7 +18,14 @@ exports.handler = async (event, context) => {
     try {
         const data = await s3.getObject(params).promise();
         console.log("Raw text \n" + data.Body.toString('utf-8'));
-        return data.Body.toString('utf-8');
+        let response ={
+        statusCode:200,
+        headers:{
+            "Access-Control-Allow-Origin":"*"
+        },
+        body: data.Body.toString('utf-8')
+    };
+    return response;
     } catch (err) {
         console.log(err);
         const message = `Error getting object ${key} from bucket ${bucket}. Make sure they exist and your bucket is in the same region as this function.`;
@@ -26,3 +33,4 @@ exports.handler = async (event, context) => {
         throw new Error(message);
     }
 };
+

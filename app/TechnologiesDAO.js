@@ -6,10 +6,10 @@
     lister(action){
 
       fetch(this.URLLister,{mode:"cors"})
-        .then(response => response.json())
+        .then(response => response.text())
         .then(data =>
           {
-            // console.log(data);
+            console.log(data);
             let listeTech = [];
             for(let position in data){
               let technologie = new Technologie(data[position].titre,
