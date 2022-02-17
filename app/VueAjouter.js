@@ -34,7 +34,8 @@ class VueAjouter{
         technologie.description = techDesc.value;
         technologie.creation = techCreation.value;
         technologie.performance = techPerf.value;
-        technologie.techSupport = techSupport.value;
+        technologie.support = techSupport.value;
+        console.log(technologie);
         techDao.ajouter(technologie,retour);
         }
       );

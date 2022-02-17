@@ -6,6 +6,7 @@
   "scripts": {
     "start": "electron ."
   },
+  
   "author": "Romain Dubard",
   "license": "ISC",
   "devDependencies": {
